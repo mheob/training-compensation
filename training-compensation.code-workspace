@@ -1,0 +1,77 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "node_modules"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/node_modules": true
+    },
+    "files.watcherExclude": {
+      "**/node_modules/**": true
+    },
+
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.maxColumn": 100,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 120,
+
+    "html.format.endWithNewline": true,
+    "html.format.wrapAttributes": "aligned-multiple",
+    "html.format.wrapLineLength": 120,
+
+    "stylelint.enable": true,
+    "css.validate": false,
+    "scss.validate": false,
+
+    "[javascript]": {
+      "editor.insertSpaces": true,
+      "editor.detectIndentation": false,
+      "editor.useTabStops": false
+    },
+
+    // Extensions
+    "prettier.eslintIntegration": true,
+    "prettier.stylelintIntegration": true,
+
+    "eslint.autoFixOnSave": true,
+
+    "cSpell.enabledLanguageIds": [
+      "asciidoc",
+      "c",
+      "cpp",
+      "csharp",
+      "css",
+      "go",
+      "handlebars",
+      "html",
+      "ignore",
+      "jade",
+      "javascript",
+      "javascriptreact",
+      "json",
+      "jsonc",
+      "latex",
+      "less",
+      "markdown",
+      "php",
+      "plaintext",
+      "pub",
+      "python",
+      "restructuredtext",
+      "rust",
+      "scss",
+      "text",
+      "typescript",
+      "typescriptreact",
+      "yml"
+    ]
+  }
+}

@@ -7,7 +7,6 @@ yarn-error.log*
 
 # Compiled stuff
 build/
-dist/
 
 # Dependency directories
 node_modules/
