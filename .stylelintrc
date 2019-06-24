@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "stylelint-config-recommended-scss",
-    "prettier-stylelint/index.js"
-  ],
+  "extends": ["stylelint-config-recommended", "prettier-stylelint/index.js"],
   "plugins": ["stylelint-order"],
   "rules": {
     "max-line-length": 150,

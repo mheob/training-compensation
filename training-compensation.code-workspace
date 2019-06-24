@@ -1,6 +1,9 @@
 {
   "folders": [
     {
+      "path": "app"
+    },
+    {
       "path": "."
     },
     {
@@ -10,7 +13,8 @@
   "settings": {
     "files.exclude": {
       "**/.git": true,
-      "**/node_modules": true
+      "**/node_modules": true,
+      "**/app": true
     },
     "files.watcherExclude": {
       "**/node_modules/**": true
