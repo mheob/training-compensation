@@ -1,19 +1,20 @@
 {
+  "root": true,
   "env": {
     "browser": true,
-    "es6": true,
-    "node": true
+    "es6": true
   },
-  "extends": ["standard"],
   "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "require": true,
+    "module": true
   },
+  "extends": ["eslint:recommended"],
+  "plugins": [],
   "parserOptions": {
-    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "rules": {
-    "semi": ["error", "always"]
+    "lines-around-comment": "off",
+    "max-len": ["error", { "code": 150 }]
   }
 }

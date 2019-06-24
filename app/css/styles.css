@@ -1,0 +1,98 @@
+/* colours */
+:root {
+  --background: #cecece;
+  --title: #000080;
+}
+
+/* layout styles */
+nav {
+  border-bottom: 0.5rem solid var(--title);
+  background: var(--background);
+}
+
+nav a {
+  color: var(--title);
+}
+
+nav a span {
+  font-weight: bold;
+}
+
+nav a img {
+  max-width: 3.75rem;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem;
+  vertical-align: middle;
+}
+
+nav .sidenav-trigger {
+  margin: 0;
+}
+
+.main-title {
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.calculation {
+  margin-top: 1.25rem;
+}
+
+.choices,
+.results {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 3px rgba(90, 90, 90, 0.1);
+}
+
+.choice,
+.result {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.choice-description,
+.result-description {
+  padding-right: 1rem;
+  font-size: 16px;
+  text-align: right;
+  flex: 60%;
+}
+
+.choice-value,
+.result-description {
+  flex: 40%;
+  padding-left: 1rem;
+}
+
+.result-output {
+  color: var(--title) !important;
+  text-align: center;
+}
+
+/* form-styles */
+input {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+  color: var(--title);
+}
+
+.select-wrapper input.select-dropdown:focus {
+  border-bottom-color: var(--title);
+}
+
+[type="checkbox"]:checked + span:not(.lever):before {
+  border-right-color: var(--title);
+  border-bottom-color: var(--title);
+}

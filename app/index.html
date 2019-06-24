@@ -1,0 +1,155 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rechner für Vereinswechsel-Entschädigung</title>
+
+    <link type="text/css" href="/css/materialize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link type="text/css" href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="grey lighten-4">
+    <!-- #region navigation -->
+    <nav class="z-depth-0">
+      <div class="nav-wrapper container">
+        <a href="/">
+          <img src="/img/tsg-irlich-logo.svg" alt="Logo der TSG Irlich" />
+          <span>TSG IRLICH</span>
+        </a>
+        <span class="right grey-text text-darken-1">
+          <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+        </span>
+      </div>
+    </nav>
+
+    <ul id="side-menu" class="sidenav side-menu">
+      <li><a class="subheader">TSG IRLICH</a></li>
+      <li><a href="/" class="waves-effect">Home</a></li>
+      <li>
+        <a href="/pages/kontakt.html" class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a>
+      </li>
+      <li><div class="divider"></div></li>
+      <li><a href="/pages/impressum.html" class="waves-effect">About</a></li>
+    </ul>
+    <!-- #endregion -->
+
+    <!-- #region calculation -->
+    <h1 class="main-title">Rechner für Vereinswechsel-Entschädigung</h1>
+
+    <div class="calculation container grey-text text-darken-1">
+      <form>
+        <!-- #region selections -->
+        <div class="card-panel choices white row">
+          <div class="choice">
+            <div class="choice-description">
+              Spieler möchte wechseln von:
+            </div>
+            <div class="choice-value">
+              <select name="from"
+                ><!-- TODO: SUM of FROM and TO is the BASE PRICE -->
+                <option value="" disabled selected>Spielklasse:</option>
+                <optgroup label="Überkreislich">
+                  <option value="3BL">3. Liga &amp; höher</option>
+                  <option value="RL">Regionalliga</option>
+                  <option value="OL">Oberliga</option>
+                  <option value="RHL">Rheinlandliga</option>
+                  <option value="BZL">Bezirksliga</option>
+                </optgroup>
+                <optgroup label="Kreisebene">
+                  <option value="KA">Kreisliga A</option>
+                  <option value="KB">Kreisliga B</option>
+                  <option value="KC">Kreisliga C</option>
+                  <option value="Kd">Kreisliga D</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="choice">
+            <div class="choice-description">
+              Spieler möchte wechseln nach:
+            </div>
+            <div class="choice-value">
+              <select name="to"
+                ><!-- TODO: SUM of FROM and TO is the BASE PRICE -->
+                <option value="" disabled selected>Spielklasse:</option>
+                <optgroup label="Überkreislich">
+                  <option value="3BL">3. Liga &amp; höher</option>
+                  <option value="RL">Regionalliga</option>
+                  <option value="OL">Oberliga</option>
+                  <option value="RHL">Rheinlandliga</option>
+                  <option value="BZL">Bezirksliga</option>
+                </optgroup>
+                <optgroup label="Kreisebene">
+                  <option value="KA">Kreisliga A</option>
+                  <option value="KB">Kreisliga B</option>
+                  <option value="KC">Kreisliga C</option>
+                  <option value="Kd">Kreisliga D</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="choice">
+            <div class="choice-description">
+              aufn. Verein keine A/B/C-Jugend:
+            </div>
+            <div class="choice-value">
+              <label>
+                <input name="juniors" type="checkbox" /><!-- TODO: if checked the SUM is BASE PRICE plus 50% -->
+                <span>hat Jugend</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="choice">
+            <div class="choice-description">
+              Spieler &lt; 18 Monate im abg. Verein:
+            </div>
+            <div class="choice-value">
+              <label>
+                <input name="time" type="checkbox" /><!-- TODO: if checked the SUM is BASE PRICE minus 50% -->
+                <span>ja, weniger</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="choice">
+            <div class="choice-description">
+              Spieler &gt; 17 &amp; &lt; 22 Jahre:
+            </div>
+            <div class="choice-value">
+              <label>
+                <input name="age" type="checkbox" /><!-- TODO: if checked the SUM is BASE PRICE plus 50% -->
+                <span>ist 18 - 21 Jahre</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region results -->
+        <div class="card-panel results white row">
+          <div class="result">
+            <div class="result-description">
+              Die festgeschriebene Summe ist:
+            </div>
+            <div class="result-value">
+              <!-- TODO: calculate the price -->
+              <input class="result-output" disabled name="price" type="text" value="0 EUR" />
+            </div>
+          </div>
+        </div>
+        <!-- #endregion -->
+      </form>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region scripts -->
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/ui.js"></script>
+    <!-- #endregion -->
+  </body>
+</html>

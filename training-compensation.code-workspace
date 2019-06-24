@@ -17,7 +17,8 @@
       "**/app": true
     },
     "files.watcherExclude": {
-      "**/node_modules/**": true
+      "**/node_modules/**": true,
+      "**/*.min.*": true
     },
 
     "editor.formatOnPaste": true,
@@ -25,11 +26,11 @@
     "editor.minimap.maxColumn": 100,
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
-    "editor.wordWrapColumn": 120,
+    "editor.wordWrapColumn": 150,
 
     "html.format.endWithNewline": true,
     "html.format.wrapAttributes": "aligned-multiple",
-    "html.format.wrapLineLength": 120,
+    "html.format.wrapLineLength": 150,
 
     "stylelint.enable": true,
     "css.validate": false,
@@ -44,38 +45,9 @@
     // Extensions
     "prettier.eslintIntegration": true,
     "prettier.stylelintIntegration": true,
+    "prettier.printWidth": 150,
 
     "eslint.autoFixOnSave": true,
-
-    "cSpell.enabledLanguageIds": [
-      "asciidoc",
-      "c",
-      "cpp",
-      "csharp",
-      "css",
-      "go",
-      "handlebars",
-      "html",
-      "ignore",
-      "jade",
-      "javascript",
-      "javascriptreact",
-      "json",
-      "jsonc",
-      "latex",
-      "less",
-      "markdown",
-      "php",
-      "plaintext",
-      "pub",
-      "python",
-      "restructuredtext",
-      "rust",
-      "scss",
-      "text",
-      "typescript",
-      "typescriptreact",
-      "yml"
-    ]
+    "liveServer.settings.multiRootWorkspaceName": "app"
   }
 }
