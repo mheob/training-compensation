@@ -3,7 +3,7 @@
   "short_name": "Wechsel-Rechner",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#CECECE",
+  "background_color": "#BDBDBD",
   "theme_color": "#000080",
   "orientation": "portrait-primary",
   "icons": [
