@@ -4,6 +4,10 @@
   --title: #000080;
 }
 
+.primary {
+  background: var(--title) !important;
+}
+
 nav {
   border-bottom: 0.5rem solid var(--title);
   background: var(--background);
@@ -22,6 +26,10 @@ nav a img {
   margin-bottom: 0.6rem;
   padding: 0.6rem;
   vertical-align: middle;
+}
+
+nav .menu-icon {
+  color: var(--title);
 }
 
 nav .sidenav-trigger {
@@ -67,7 +75,7 @@ nav .sidenav-trigger {
 }
 
 .choice-value,
-.result-description {
+.result-value {
   flex: 1;
   padding-left: 1rem;
 }

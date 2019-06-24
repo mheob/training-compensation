@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rechner für Vereinswechsel-Entschädigung</title>
 
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#000080" />
 
@@ -25,7 +25,7 @@
           <img src="/img/tsg-irlich-logo.svg" alt="Logo der TSG Irlich" />
           <span>TSG IRLICH</span>
         </a>
-        <span class="right grey-text text-darken-1">
+        <span class="right menu-icon">
           <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
         </span>
       </div>
@@ -35,10 +35,10 @@
       <li><a class="subheader">TSG IRLICH</a></li>
       <li><a href="/" class="waves-effect">Home</a></li>
       <li>
-        <a href="/pages/kontakt.html" class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a>
+        <a href="/pages/kontakt.html" class="waves-effect"><i class="material-icons">mail_outline</i>Kontakt</a>
       </li>
       <li><div class="divider"></div></li>
-      <li><a href="/pages/impressum.html" class="waves-effect">About</a></li>
+      <li><a href="/pages/impressum.html" class="waves-effect">Impressum</a></li>
     </ul>
     <!-- #endregion -->
 
@@ -55,8 +55,7 @@
               Spieler möchte wechseln von:
             </div>
             <div class="choice-value">
-              <select name="from"
-                ><!-- TODO: SUM of FROM and TO is the BASE PRICE -->
+              <select name="from">
                 <option value="" disabled selected>Spielklasse:</option>
                 <optgroup label="Überkreislich">
                   <option value="3BL">3. Liga &amp; höher</option>
@@ -69,7 +68,7 @@
                   <option value="KA">Kreisliga A</option>
                   <option value="KB">Kreisliga B</option>
                   <option value="KC">Kreisliga C</option>
-                  <option value="Kd">Kreisliga D</option>
+                  <option value="KD">Kreisliga D</option>
                 </optgroup>
               </select>
             </div>
@@ -81,8 +80,7 @@
               Spieler möchte wechseln nach:
             </div>
             <div class="choice-value">
-              <select name="to"
-                ><!-- TODO: SUM of FROM and TO is the BASE PRICE -->
+              <select name="to">
                 <option value="" disabled selected>Spielklasse:</option>
                 <optgroup label="Überkreislich">
                   <option value="3BL">3. Liga &amp; höher</option>
@@ -95,7 +93,7 @@
                   <option value="KA">Kreisliga A</option>
                   <option value="KB">Kreisliga B</option>
                   <option value="KC">Kreisliga C</option>
-                  <option value="Kd">Kreisliga D</option>
+                  <option value="KD">Kreisliga D</option>
                 </optgroup>
               </select>
             </div>
@@ -108,7 +106,7 @@
             </div>
             <div class="choice-value">
               <label>
-                <input name="juniors" type="checkbox" /><!-- TODO: if checked the SUM is BASE PRICE plus 50% -->
+                <input name="juniors" type="checkbox" />
                 <span>hat keine Jugend</span>
               </label>
             </div>
@@ -121,7 +119,7 @@
             </div>
             <div class="choice-value">
               <label>
-                <input name="time" type="checkbox" /><!-- TODO: if checked the SUM is BASE PRICE minus 50% -->
+                <input name="time" type="checkbox" />
                 <span>ja, weniger</span>
               </label>
             </div>
@@ -134,7 +132,7 @@
             </div>
             <div class="choice-value">
               <label>
-                <input name="age" type="checkbox" /><!-- TODO: if checked the SUM is BASE PRICE plus 50% -->
+                <input name="age" type="checkbox" />
                 <span>ist 18 - 21 Jahre</span>
               </label>
             </div>
@@ -147,10 +145,9 @@
           <div class="result">
             <div class="result-description">
               <!-- TODO: add title tag -->
-              Zu zahlen sind:
+              zu bezahlen sind:
             </div>
             <div class="result-value">
-              <!-- TODO: calculate the price -->
               <input class="result-output" disabled name="price" type="text" value="0 EUR" />
             </div>
           </div>
@@ -163,7 +160,7 @@
     <!-- #region scripts -->
     <script src="/js/materialize.min.js"></script>
     <script src="/js/app.js"></script>
-    <script src="/js/ui.js"></script>
+    <script src="/js/ui.js" type="module"></script>
     <!-- #endregion -->
   </body>
 </html>
