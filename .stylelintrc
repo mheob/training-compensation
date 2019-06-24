@@ -15,7 +15,7 @@
     ],
     "no-descending-specificity": null,
     "max-line-length": [
-      150,
+      120,
       {
         "ignore": "non-comments",
         "ignorePattern": ["/(https?://[0-9,a-z]*.*)|(^description\\:.+)|(^tags\\:.+)/i"]

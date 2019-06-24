@@ -15,6 +15,6 @@
   },
   "rules": {
     "lines-around-comment": "off",
-    "max-len": ["error", { "code": 150 }]
+    "max-len": ["error", { "code": 120 }]
   }
 }
