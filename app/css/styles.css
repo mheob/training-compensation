@@ -4,7 +4,6 @@
   --title: #000080;
 }
 
-/* layout styles */
 nav {
   border-bottom: 0.5rem solid var(--title);
   background: var(--background);
@@ -27,6 +26,7 @@ nav a img {
 
 nav .sidenav-trigger {
   margin: 0;
+  cursor: pointer;
 }
 
 .main-title {
@@ -53,7 +53,7 @@ nav .sidenav-trigger {
 .result {
   flex: 1;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
@@ -63,12 +63,12 @@ nav .sidenav-trigger {
   padding-right: 1rem;
   font-size: 16px;
   text-align: right;
-  flex: 60%;
+  flex: 1;
 }
 
 .choice-value,
 .result-description {
-  flex: 40%;
+  flex: 1;
   padding-left: 1rem;
 }
 
