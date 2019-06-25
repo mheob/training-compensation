@@ -17,7 +17,7 @@
     "last 2 Opera versions"
   ],
   "devDependencies": {
-    "eslint": "^6.0.0",
+    "eslint": "^6.0.1",
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0",
     "prettier-stylelint": "^0.4.2",
