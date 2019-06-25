@@ -1,4 +1,4 @@
-const ts = "1561454302";
+const ts = "1561460121";
 const staticCacheName = "site-static-" + ts;
 const dynamicCacheName = "site-dynamic-" + ts;
 const assets = [

@@ -55,7 +55,7 @@ nav .sidenav-trigger {
 
 .main-title {
   margin-bottom: 2.5rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -104,6 +104,11 @@ nav .sidenav-trigger {
 .result-output {
   color: var(--title) !important;
   text-align: center;
+}
+
+.privacy h3,
+.impress h2 {
+  font-size: 1.7rem;
 }
 
 /* form-styles */
