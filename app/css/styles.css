@@ -4,8 +4,24 @@
   --title: #000080;
 }
 
+abbr {
+  border-bottom: 1px dotted #757575;
+}
+
 .primary {
   background: var(--title) !important;
+}
+
+.background {
+  background: var(--background) !important;
+}
+
+.primary-text {
+  color: var(--title) !important;
+}
+
+.background-text {
+  color: var(--background) !important;
 }
 
 nav {
@@ -48,7 +64,8 @@ nav .sidenav-trigger {
 }
 
 .choices,
-.results {
+.results,
+.side-notes {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -64,6 +81,10 @@ nav .sidenav-trigger {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
+}
+
+.result {
+  margin-bottom: 0;
 }
 
 .choice-description,

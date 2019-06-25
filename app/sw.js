@@ -1,5 +1,6 @@
-const staticCacheName = "site-static-v2";
-const dynamicCacheName = "site-dynamic-v2";
+const ts = "1561454302";
+const staticCacheName = "site-static-" + ts;
+const dynamicCacheName = "site-dynamic-" + ts;
 const assets = [
   "/",
   "/index.html",
@@ -8,9 +9,10 @@ const assets = [
   "/img/favicon.ico",
   "/img/tsg-irlich-logo.svg",
   "/js/app.js",
-  "/js/data.js",
   "/js/materialize.min.js",
   "/js/ui.js",
+  "/js/data/prices.js",
+  "/js/ui-components/calculation.js",
   "/pages/404.html",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
   "https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
@@ -35,11 +37,13 @@ self.addEventListener("install", evt => {
 // activate service worker
 self.addEventListener("activate", evt => {
   evt.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(
-        keys.filter(key => key !== staticCacheName && key !== dynamicCacheName).map(key => caches.delete(key))
-      );
-    })
+    caches
+      .keys()
+      .then(keys =>
+        Promise.all(
+          keys.filter(key => key !== staticCacheName && key !== dynamicCacheName).map(key => caches.delete(key))
+        )
+      )
   );
 });
 
@@ -48,18 +52,17 @@ self.addEventListener("fetch", evt => {
   evt.respondWith(
     caches
       .match(evt.request)
-      .then(cacheRes => {
-        return (
+      .then(
+        cacheRes =>
           cacheRes ||
           fetch(evt.request).then(fetchRes => {
             return caches.open(dynamicCacheName).then(cache => {
               cache.put(evt.request.url, fetchRes.clone());
-              limitCacheSize(dynamicCacheName, 10);
+              limitCacheSize(dynamicCacheName, 20);
               return fetchRes;
             });
           })
-        );
-      })
+      )
       .catch(() => {
         if (evt.request.url.indexOf(".html") >= 0) {
           return caches.match("/pages/404.html");

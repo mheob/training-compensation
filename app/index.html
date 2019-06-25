@@ -17,7 +17,7 @@
 
     <link type="text/css" href="/css/styles.css" rel="stylesheet" />
   </head>
-  <body class="grey lighten-3">
+  <body class="calculate grey lighten-3">
     <!-- #region navigation -->
     <nav class="z-depth-0">
       <div class="nav-wrapper container">
@@ -43,117 +43,142 @@
     <!-- #endregion -->
 
     <!-- #region calculation -->
-    <h1 class="main-title">Rechner für Vereinswechsel-Entschädigung</h1>
-
     <div class="calculation container grey-text text-darken-1">
-      <form>
-        <!-- #region selections -->
-        <div class="card-panel choices white row">
-          <div class="choice">
-            <div class="choice-description">
-              <!-- TODO: add title tag -->
-              Spieler möchte wechseln von:
-            </div>
-            <div class="choice-value">
-              <select name="from">
-                <option value="" disabled selected>Spielklasse:</option>
-                <optgroup label="Überkreislich">
-                  <option value="3BL">3. Liga &amp; höher</option>
-                  <option value="RL">Regionalliga</option>
-                  <option value="OL">Oberliga</option>
-                  <option value="RHL">Rheinlandliga</option>
-                  <option value="BZL">Bezirksliga</option>
-                </optgroup>
-                <optgroup label="Kreisebene">
-                  <option value="KA">Kreisliga A</option>
-                  <option value="KB">Kreisliga B</option>
-                  <option value="KC">Kreisliga C</option>
-                  <option value="KD">Kreisliga D</option>
-                </optgroup>
-              </select>
-            </div>
-          </div>
+      <h1 class="main-title">Rechner für Vereinswechsel-Entschädigung</h1>
 
-          <div class="choice">
-            <div class="choice-description">
-              <!-- TODO: add title tag -->
-              Spieler möchte wechseln nach:
-            </div>
-            <div class="choice-value">
-              <select name="to">
-                <option value="" disabled selected>Spielklasse:</option>
-                <optgroup label="Überkreislich">
-                  <option value="3BL">3. Liga &amp; höher</option>
-                  <option value="RL">Regionalliga</option>
-                  <option value="OL">Oberliga</option>
-                  <option value="RHL">Rheinlandliga</option>
-                  <option value="BZL">Bezirksliga</option>
-                </optgroup>
-                <optgroup label="Kreisebene">
-                  <option value="KA">Kreisliga A</option>
-                  <option value="KB">Kreisliga B</option>
-                  <option value="KC">Kreisliga C</option>
-                  <option value="KD">Kreisliga D</option>
-                </optgroup>
-              </select>
-            </div>
+      <!-- #region selections -->
+      <div class="card-panel choices white row">
+        <div class="choice">
+          <div class="choice-description">
+            <abbr
+              class="tooltip"
+              data-tooltip="Die Liga des abgebenden Vereins, in der der Spieler nun gespielt hätte."
+            >
+              Liga alter Verein:
+            </abbr>
           </div>
-
-          <div class="choice">
-            <div class="choice-description">
-              <!-- TODO: add title tag -->
-              neuer Verein ohne A/B/C-Jugend:
-            </div>
-            <div class="choice-value">
-              <label>
-                <input name="juniors" type="checkbox" />
-                <span>hat keine Jugend</span>
-              </label>
-            </div>
+          <div class="choice-value">
+            <select name="from">
+              <option value="" disabled selected>Spielklasse:</option>
+              <optgroup label="Überkreislich">
+                <option value="3BL">3. Liga &amp; höher</option>
+                <option value="RL">Regionalliga</option>
+                <option value="OL">Oberliga</option>
+                <option value="RHL">Rheinlandliga</option>
+                <option value="BZL">Bezirksliga</option>
+              </optgroup>
+              <optgroup label="Kreisebene">
+                <option value="KA">Kreisliga A</option>
+                <option value="KB">Kreisliga B</option>
+                <option value="KC">Kreisliga C</option>
+                <option value="KD">Kreisliga D</option>
+              </optgroup>
+            </select>
           </div>
+        </div>
 
-          <div class="choice">
-            <div class="choice-description">
-              <!-- TODO: add title tag -->
-              Spieler &lt; 18 Monate im abg. Verein:
-            </div>
-            <div class="choice-value">
-              <label>
-                <input name="time" type="checkbox" />
-                <span>ja, weniger</span>
-              </label>
-            </div>
+        <div class="choice">
+          <div class="choice-description">
+            <abbr
+              class="tooltip"
+              data-tooltip="Die Liga des aufnehmenden Vereins, in der der Spieler nun spielen wird."
+            >
+              Liga neuer Verein:
+            </abbr>
           </div>
+          <div class="choice-value">
+            <select name="to">
+              <option value="" disabled selected>Spielklasse:</option>
+              <optgroup label="Überkreislich">
+                <option value="3BL">3. Liga &amp; höher</option>
+                <option value="RL">Regionalliga</option>
+                <option value="OL">Oberliga</option>
+                <option value="RHL">Rheinlandliga</option>
+                <option value="BZL">Bezirksliga</option>
+              </optgroup>
+              <optgroup label="Kreisebene">
+                <option value="KA">Kreisliga A</option>
+                <option value="KB">Kreisliga B</option>
+                <option value="KC">Kreisliga C</option>
+                <option value="KD">Kreisliga D</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
 
-          <div class="choice">
-            <div class="choice-description">
-              <!-- TODO: add title tag -->
+        <div class="choice">
+          <div class="choice-description">
+            <abbr
+              class="tooltip"
+              data-tooltip="Der aufnehmende Verein hatte im abgelaufenen Spieljahr keine A-, B- und C-Jugend 11er-Mannschaft."
+            >
+              neuer Verein ohne Jugend:
+            </abbr>
+          </div>
+          <div class="choice-value">
+            <label>
+              <input name="juniors" type="checkbox" />
+              <span>hat keine Jugend</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="choice">
+          <div class="choice-description">
+            <abbr class="tooltip" data-tooltip="Der Spieler war weniger wie 18 Monate im abgebenden Verein.">
+              Spieler &lt; 18 Mon. im alten Verein:
+            </abbr>
+          </div>
+          <div class="choice-value">
+            <label>
+              <input name="time" type="checkbox" />
+              <span>ja, weniger</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="choice">
+          <div class="choice-description">
+            <abbr
+              class="tooltip"
+              data-tooltip="Der Spieler hat das 17., aber noch nicht das 21. Lebensjahr vollendet und war die letzten drei Jahre im abgebenden Verein."
+            >
               Spieler &gt; 17 &amp; &lt; 22 Jahre:
-            </div>
-            <div class="choice-value">
-              <label>
-                <input name="age" type="checkbox" />
-                <span>ist 18 - 21 Jahre</span>
-              </label>
-            </div>
+            </abbr>
+          </div>
+          <div class="choice-value">
+            <label>
+              <input name="age" type="checkbox" />
+              <span>ist 18 - 21 Jahre</span>
+            </label>
           </div>
         </div>
-        <!-- #endregion -->
+      </div>
+      <!-- #endregion -->
 
-        <!-- #region results -->
-        <div class="card-panel results white row">
-          <div class="result">
-            <div class="result-description">
-              <!-- TODO: add title tag -->
-              zu bezahlen sind:
-            </div>
-            <div class="result-value">
-              <input class="result-output" disabled name="price" type="text" value="0 EUR" />
-            </div>
+      <!-- #region results -->
+      <div class="card-panel results row background primary-text">
+        <div class="result">
+          <div class="result-description">
+            <abbr class="tooltip" data-tooltip="Der Brutto-Betrag, der zu zahlen ist.">zu bezahlen sind:</abbr>
+          </div>
+          <div class="result-value">
+            <input class="result-output" disabled name="price" type="text" value="0 EUR" />
           </div>
         </div>
-        <!-- #endregion -->
-      </form>
+      </div>
+      <!-- #endregion -->
+
+      <div class="card-panel center side-notes">
+        <p>
+          Bei diesen Entschädigungen handelt es sich um Nettobeträge. Sofern beim Empfänger (abgebender Verein)
+          Umsatzsteuer anfällt, hat dieser eine Rechnung mit Umsatzsteuerausweis auszustellen.
+        </p>
+        <p>
+          Bei einem Vereinswechsel innerhalb des Fußballverbandes Rheinland zählen JSG-Mannschaften als eigene Jugend.
+        </p>
+        <p>Stand der Preisliste ist: <em>Juni 2019</em></p>
+      </div>
     </div>
     <!-- #endregion -->
 
