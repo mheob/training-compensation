@@ -18,6 +18,7 @@
     "last 2 Opera versions"
   ],
   "devDependencies": {
+    "editorconfig": "^0.15.3",
     "eslint": "^6.5.1",
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0",

@@ -43,11 +43,8 @@
     },
 
     // Extensions
-    "prettier.eslintIntegration": true,
-    "prettier.stylelintIntegration": true,
-    "prettier.printWidth": 120,
-
     "eslint.autoFixOnSave": true,
+    "prettier.printWidth": 120,
     "liveServer.settings.multiRootWorkspaceName": "app"
   }
 }
