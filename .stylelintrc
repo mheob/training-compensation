@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-recommended", "prettier-stylelint"],
+  "extends": ["stylelint-config-recommended"],
   "plugins": ["stylelint-order"],
   "ignoreFiles": "**/*.min.*",
   "rules": {
