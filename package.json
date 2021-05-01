@@ -19,10 +19,10 @@
   ],
   "devDependencies": {
     "editorconfig": "0.15.3",
-    "eslint": "7.21.0",
+    "eslint": "7.25.0",
     "prettier": "2.2.1",
     "prettier-eslint": "12.0.0",
-    "stylelint": "13.11.0",
+    "stylelint": "13.13.0",
     "stylelint-config-recommended": "5.0.0",
     "stylelint-order": "4.1.0"
   }
