@@ -18,12 +18,11 @@
     "last 2 Opera versions"
   ],
   "devDependencies": {
-    "editorconfig": "0.15.3",
-    "eslint": "7.25.0",
-    "prettier": "2.2.1",
-    "prettier-eslint": "12.0.0",
-    "stylelint": "13.13.1",
-    "stylelint-config-recommended": "5.0.0",
-    "stylelint-order": "4.1.0"
+    "eslint": "^7.32.0",
+    "prettier": "^2.3.2",
+    "prettier-eslint": "^13.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-order": "^4.1.0"
   }
 }
