@@ -21,7 +21,7 @@
     "eslint": "^7.32.0",
     "prettier": "^2.8.8",
     "prettier-eslint": "^13.0.0",
-    "stylelint": "^15.10.1",
+    "stylelint": "^15.10.2",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-order": "^4.1.0"
   }
